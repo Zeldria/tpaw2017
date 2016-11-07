@@ -1,23 +1,109 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP4</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+﻿<!DOCTYPE html>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <!--<link rel="stylesheet" href="style.css">-->
-        <!--<script src="main.js"></script>-->
-    </head>
-    <body>        
-        <h1>TP4</h1>
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        <img src="../galilee.png" alt="Logo Galilee"/>
-    </body>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+	<script type="text/javascript" src="formulaire.js"></script>
+	<title></title>
+<div id="result"></div>
+	<script>
+	function save(){
+		
+	    var nom = document.getElementById('inputnom').value;
+	    var prenom = document.getElementById('inputprenom').value;
+	    var date = document.getElementById('inputDate').value;
+	    var adresse = document.getElementById('inputAdress3').value;
+	    var mail = document.getElementById('inputEmail3').value;
+	    var pass = document.getElementById('inputPassword3').value;
+	    localStorage.setItem("text", nom);
+		if (nom.length != "" && prenom.length != "" && date.length !="" && adresse.length!="" && mail.length!= "" && pass.length!="") {
+      
+        document.getElementById("success").innerHTML="Bravo! le formulaire est sauvegardé";
+		
+		}
+	}
+
+	</script>
+
+</head>
+<body>
+
+<h1> <i> TP4- AW Formulaire </i> </h1>
+
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputnom" class="col-sm-2 control-label">Nom</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputnom">
+    </div>
+     <div class="col-sm-2 keyCount">
+    </div>
+  </div>
+  <form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputprenom" class="col-sm-2 control-label">Prénom</label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputprenom">
+    </div>
+     <div class="col-sm-2 keyCount">
+    </div>
+  </div>
+  
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputDate" class="col-sm-2 control-label">Date de naissance</label>
+    <div class="col-sm-8">
+      <input type="date" class="form-control" id="inputDate">
+    </div>
+     <div class="col-sm-2 keyCount">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAdress3" class="col-sm-2 control-label">Adresse </label>
+    <div class="col-sm-8">
+      <input type="text" class="form-control" id="inputAdress3" placeholder="Adresse" > <input type="button"  value="GPS" onclick="getLocation();"/>
+      <div id="demo"></div>
+    </div>
+    <div class="col-sm-2 keyCount">
+    </div>
+    </div>
+    <form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-8">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    </div>
+    <div class="col-sm-2 keyCount">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-8">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+      <div class="col-sm-2 keyCount">
+    </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> Remember me
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="button"  class="btn btn-default" id="submitForm" value="save" onclick="save()"/>
+    </div>
+  </div>
+</form>
+<div id="success"></div>
+</body>
 </html>
