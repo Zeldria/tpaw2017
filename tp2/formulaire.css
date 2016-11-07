@@ -1,0 +1,42 @@
+﻿body{
+    background-color:#ECF0F1;
+    text-align:center;
+    background-image:url(kali-dragon-middle.png);
+    background-repeat:no-repeat;
+}
+.connexion{
+    padding:8px;
+    border-radius:5px;
+    border:1px solid lightgray;
+}
+.connexion[type="date"]{
+    padding:5px 120px;
+}
+.addresse{
+    padding:8px 105px;
+    border-radius:5px;
+    border:1px solid lightgray;
+}
+.connexion[type="email"]{
+    padding:8px 105px;
+}
+.validation{
+    padding:10px 25px;
+    border-radius:5px;
+    color:white;
+    border:0;
+    border-bottom:3px solid #34E4DB;
+    background-color:#3498DB;
+    transition:all linear 300ms;
+}
+.validation:hover{
+    border-bottom:0px solid #34E4DB;
+    transform:translateY(3px);
+}
+.conteneur{
+    display:inline-block;
+    margin:0 auto;
+}
+table{
+    text-align:left;
+}

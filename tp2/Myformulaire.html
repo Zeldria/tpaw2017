@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>MyFormulaire</title>
+    <!--<link type="text/css" rel="stylesheet" src="Css/bootstrap.css" />-->
+    <link rel="stylesheet" href="formulaire.css" />
+    <script type="text/javascript" src="formulaire.js"></script>
+</head>
+<body>
+ <div class="conteneur">
+    <!--<form action="Myformulaire.html" method="post">--> 
+         <table>
+             <tr>
+                 <td> <label for="nom">Nom*</label> </td>
+                 <td> <label for="prenom">Prenom*</label></td>
+             </tr>
+             <tr>
+                 <td><input type="text" class="connexion" id="Nom" placeholder="Tapez votre Nom" required /></td>
+                 <td><input type="text" class="connexion" id="Prenom" placeholder="Tapez votre Prenom" required /></td>
+             </tr>
+             <tr>
+                 <td><label for="date de naissance">Date de naissance</label></td>
+             </tr>
+             <tr>
+                 <td colspan="2" align="left"><input type="date" id="Date" class="connexion" required /></td>
+             </tr>
+             <tr>
+                 <td><label for="adresse">Adresse*</label></td>
+             </tr>
+             <tr>
+                 <td colspan="2" align="left"><input type="text" class="addresse" id="Adresse" placeholder="Tapez votre adresse" required /></td>
+             </tr>
+             <tr>
+                 <td><label for="email">Mail</label></td>
+             </tr>
+          <tr>
+              <td colspan="2" align="left"><input type="email" class="connexion" placeholder="Tapez votre Email" required /></td>
+          </tr>
+             <tr>
+                 <td colspan="2" align="center"><input type="button" name="button" class="validation" value="Valider" onclick="Validation();" /></td>
+             </tr>
+         </table>
+     <!--</form>-->
+
+ </div>
+
+</body>
+</html>
