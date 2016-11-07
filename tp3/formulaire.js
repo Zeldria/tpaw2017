@@ -9,7 +9,7 @@
  		}
  		else {
 
- 		$('.modal-body').html('<p> vous êtes nés le 21/112/2000 et vous habitez <br/> <a href="https://developers.google.com/maps/documentation/static-maps/"> <img src="https://maps.googleapis.com/maps/api/staticmap?center=' + $("#inputEmail3").val() + '&markers=' + $("#inputEmail3").val() + '&size=640x400"/> </a> </p>');
+ 		$('.modal-body').html('<p> vous êtes nés le 21/112/2000 et vous habitez <br/> <a href="https://developers.google.com/maps/documentation/static-maps/"> <img src="https://maps.googleapis.com/maps/api/staticmap?center=' + $("#inputAdresse").val() + '&markers=' + $("#inputEmail3").val() + '&size=640x400"/> </a> </p>');
  		$('.modal').modal('show');
  	}
  	});
